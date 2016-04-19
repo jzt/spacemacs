@@ -13,7 +13,7 @@
    - [[Formatting][Formatting]]
  - [[Working with Go][Working with Go]]
    - [[Go commands (start with =m=):][Go commands (start with =m=):]]
-   - [[Go Oracle][Go Oracle]]
+   - [[Go Guru][Go Guru]]
 
 * Description
 This layer adds extensive support for go.
@@ -21,7 +21,7 @@ This layer adds extensive support for go.
 ** Features:
 - gofmt/goimports on file save
 - Auto-completion using [[https://github.com/nsf/gocode/tree/master/emacs][go-autocomplete]] (with the =auto-completion= layer)
-- Source analysis using [[http://golang.org/s/oracle-user-manual][go-oracle]]
+- Source analysis using [[http://golang.org/s/oracle-user-manual][go-guru]]
 
 * Install
 ** Pre-requisites
@@ -30,7 +30,7 @@ You will need =gocode= and =godef=:
 #+BEGIN_SRC sh
   go get -u -v github.com/nsf/gocode
   go get -u -v github.com/rogpeppe/godef
-  go get -u -v golang.org/x/tools/cmd/oracle
+  go get -u -v golang.org/x/tools/cmd/guru
   go get -u -v golang.org/x/tools/cmd/gorename
 #+END_SRC
 
@@ -87,19 +87,18 @@ function testing to work.
 | ~SPC m t s~ | run "go test" for the suite you're currently in (requires gocheck)                    |
 
 
-** Go Oracle
+** Go Guru
 
 | Key Binding | Description                                                |
 |-------------+------------------------------------------------------------|
-| ~SPC m r o~ | go-oracle set analysis scope                               |
-| ~SPC m r <~ | go-oracle show possible callers                            |
-| ~SPC m r >~ | go-oracle show call targets                                |
-| ~SPC m r c~ | go-oracle show channel sends/receives                      |
-| ~SPC m r d~ | go-oracle show definition                                  |
-| ~SPC m r f~ | go-oracle show free variables                              |
-| ~SPC m r g~ | go-oracle show callgraph                                   |
-| ~SPC m r i~ | go-oracle show implements relation                         |
-| ~SPC m r p~ | go-oracle show what the select expression points to        |
-| ~SPC m r r~ | go-oracle show all references to object                    |
-| ~SPC m r s~ | go-oracle show callstack                                   |
-| ~SPC m r t~ | go-oracle describe selected syntax, kind, type and methods |
+| ~SPC m r o~ | go-guru set analysis scope                               |
+| ~SPC m r <~ | go-guru show possible callers                            |
+| ~SPC m r >~ | go-guru show call targets                                |
+| ~SPC m r c~ | go-guru show channel sends/receives                      |
+| ~SPC m r d~ | go-guru show definition                                  |
+| ~SPC m r f~ | go-guru show free variables                              |
+| ~SPC m r i~ | go-guru show implements relation                         |
+| ~SPC m r p~ | go-guru show what the select expression points to        |
+| ~SPC m r r~ | go-guru show all references to object                    |
+| ~SPC m r s~ | go-guru show callstack                                   |
+| ~SPC m r t~ | go-guru describe selected syntax, kind, type and methods |
